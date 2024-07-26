@@ -1,21 +1,35 @@
+# The tutorial is only for Windows systems.
 
 Step1: Create a Dataset and label it by using labelimg
 
+Clone the repository:
+
     git clone https://github.com/HumanSignal/labelImg.git
+    
+Convert resource files for PyQt5:    
+
     pyrcc4 -o libs/resources.py resources.qrc
     For pyqt5, pyrcc5 -o libs/resources.py resources.qrc
-  
+    
+Run LabelImg:  
+
     python labelImg.py
     python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
 Step2: Create virtual environment
-  Installing annaconda and using annaconda prompt to create virtual environment
+
+  Install Anaconda and use the Anaconda Prompt to create a virtual environment:
   
      conda create --name paddle_env python=3.8 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
      conda activate paddle_env
+     
+  Install required packages
+  
      pip install -r requirements.txt
 
-Step3: Train model by YOLOv8 and we have 3 pretrained models
+Step3: Train a New Model or Use One of the Three Pre-trained YOLOv8 Models
+
+      git clone https://github.com/quocbao2772004/plate.git
 
 Step4: Using solve.py to see the results
 
