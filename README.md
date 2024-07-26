@@ -29,7 +29,7 @@ Step2: Create virtual environment
 
 Step3: Train a New Model or Use One of the Three Pre-trained YOLOv8 Models
 
-      git clone https://github.com/quocbao2772004/plate.git
+      git clone https://github.com/quocbao2772004/license_plate.git
 
 Step4: Using solve.py to see the results
 
