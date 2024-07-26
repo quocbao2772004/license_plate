@@ -18,3 +18,12 @@ Step2: Create virtual environment
 Step3: Train model by YOLOv8 and we have 3 pretrained models
 
 Step4: Using solve.py to see the results
+
+    !python solve.py
+
+![image](https://github.com/user-attachments/assets/c5baa16e-f5cd-4f27-97f1-7657e30ac4c8)
+
+![image](https://github.com/user-attachments/assets/584c8f0b-a2d3-4b9b-abb8-829c608729b5)
+
+
+
