@@ -35,15 +35,16 @@ Step4: Using solve.py to see the results
 
     !python solve.py
 
-![image](https://github.com/user-attachments/assets/c5baa16e-f5cd-4f27-97f1-7657e30ac4c8)
+![Screenshot 2024-07-29 105913](https://github.com/user-attachments/assets/965596dc-32ec-4dce-be47-fc1ddae7e3eb)
 
-![image](https://github.com/user-attachments/assets/584c8f0b-a2d3-4b9b-abb8-829c608729b5)
+![Screenshot 2024-07-29 105852](https://github.com/user-attachments/assets/ff2f59e2-1d52-40bb-91f2-9f0d506350e9)
 
-![image](https://github.com/user-attachments/assets/863bcc62-e5f4-4470-a51e-361c08c0142b)
+![Screenshot 2024-07-29 105831](https://github.com/user-attachments/assets/197a4104-3243-4c86-a633-ec67876bb647)
 
-![image](https://github.com/user-attachments/assets/1e50157e-b8ea-45d4-8796-1e79bb7f60ef)
+![Screenshot 2024-07-29 105928](https://github.com/user-attachments/assets/8c50a2f8-b12b-4ea8-82de-16e6e08e696f)
 
-![image](https://github.com/user-attachments/assets/a8916b9d-6503-4158-8367-12575d1c2e50)
+![Screenshot 2024-07-29 105928](https://github.com/user-attachments/assets/a405a33d-770b-4af6-81ac-60215fee57c4)
+
 
 When using video() function, if we wanna stop the video, press the q key
 
