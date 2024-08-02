@@ -51,6 +51,19 @@ Step4: Using solve.py to see the results
 
 ![image](https://github.com/user-attachments/assets/609a76e0-bca9-4f8a-a8b8-57b9b9fb5582)
 
+set up time
+
+![image](https://github.com/user-attachments/assets/ea27a0fb-d259-4154-a266-3f814eb100b8)
+
+![image](https://github.com/user-attachments/assets/6ebd7388-15f6-41f1-aff8-37d0e8baa308)
+
+![image](https://github.com/user-attachments/assets/992ee222-8843-4a5e-bd50-d4a65d784e14)
+
+![image](https://github.com/user-attachments/assets/3d5dacac-8810-43c1-a0f4-5974b615f6a8)
+
+![image](https://github.com/user-attachments/assets/7337fc14-c965-4e44-8166-1f66a7dd1f94)
+
+![image](https://github.com/user-attachments/assets/6ca05206-e73f-45e6-bc42-a7040085917a)
 
 When using video() function, if we wanna stop the video, press the q key
 
