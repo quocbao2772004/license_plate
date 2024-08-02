@@ -4,7 +4,7 @@ from put_text import put_text_with_pillow
 
 font_size = 20
 color = (0 ,0, 0)
-font_path = r"c:\Users\PC\Downloads\font ttf tiếng việt\2BYTE\VMELIB.TTF"
+font_path = r"/home/quoc-bao/Downloads/Bo-Font-Full/Bo-Font-tieng-Trung-Quoc/Bộ Font tiếng Trung Quốc/14-bo-font-tieng-trung-dac-biet- chinesecomvn/fzstk.ttf"
 
 def tao_nen(original_image):
   if original_image is None:
@@ -23,15 +23,23 @@ def show_lisence_plate(image1, image2):
 
     max_height = max(height1, height2)
     max_width = max(width1, width2)
-
+    w = min(width1, width2)+ 20*2
+    r,l=0,0
+    if w < 120:
+        r,l = 35, 35
+    else:
+        r,l=20,20
     if height1 < max_height:
-        image1 = cv2.copyMakeBorder(image1, 60, max_height-height1-60, 10, 10, cv2.BORDER_CONSTANT, value=[255, 255, 255])
+        image1 = cv2.copyMakeBorder(image1, 60, max_height-height1-60, r, l, cv2.BORDER_CONSTANT, value=[255, 255, 255])
         horizontal_concat = np.concatenate((image2, image1), axis=1)
     if height2 < max_height:
-        image2 = cv2.copyMakeBorder(image2, 60, max_height-height2-60, 10, 10, cv2.BORDER_CONSTANT, value=[255, 255, 255])
+        image2 = cv2.copyMakeBorder(image2, 60, max_height-height2-60, r, l, cv2.BORDER_CONSTANT, value=[255, 255, 255])
         horizontal_concat = np.concatenate((image1, image2), axis=1)
-    horizontal_concat = put_text_with_pillow(horizontal_concat,"License"+"\n"+"Plate" , (max(width1,width2)+2,0), font_path, font_size, color)
-    horizontal_concat = put_text_with_pillow(horizontal_concat,"Number" , (max(width1,width2)+2,160), font_path, font_size, color)
+    width, height = max(width1, width2)+2, max(height1,height2)//2 + 20
+    rotate = (width, 0)
+    # (min(max(height1, height2),max(width1,width2))+2,max(max(height1, height2)//2,0))
+    horizontal_concat = put_text_with_pillow(horizontal_concat,"License"+"\n"+"Plate" , rotate, font_path, font_size, color)
+    horizontal_concat = put_text_with_pillow(horizontal_concat,"Number" , (width, height//1.2), font_path, font_size, color)
     return horizontal_concat
     
 
