@@ -1,6 +1,6 @@
 # The tutorial is for Windows systems and Linux.
 
-<h2> If you have had a dataset, please skip step 1 and if you have had annaconda environment, please skip step 2 </h2>
+<h2> If you have had a dataset, please skip step 1 and if you have had annaconda environment, please skip the installation annaconda in step 2 </h2>
 
 <h3> Step1: Create a Dataset and label it by using labelimg </h3>
 
