@@ -8,12 +8,12 @@ Clone the repository:
     
 Convert resource files for PyQt5:    
 
-Windows:
+<h4> Windows: </h4>
 
     pyrcc4 -o libs/resources.py resources.qrc
     For pyqt5, pyrcc5 -o libs/resources.py resources.qrc
 
-Linux:
+<h4> Linux: </h4>
 
     sudo apt-get install pyqt5-dev-tools
     sudo pip3 install -r requirements/requirements-linux-python3.txt
@@ -26,9 +26,9 @@ Run LabelImg:
     python labelImg.py
     python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
-Step2: Create virtual environment
+<h3> Step2: Create virtual environment </h3>
 
-If you use Windows system:
+<h4> If you use Windows system: </h4>
 
   Install Anaconda and use the Anaconda Prompt to create a virtual environment:
   
@@ -39,7 +39,7 @@ If you use Windows system:
   
      pip install -r requirements.txt
 
-If you use Linux:
+<h4> If you use Linux: </h4>
 
   Install annaconda:
 
@@ -118,11 +118,11 @@ After install annaconda environment on Linux or Windows, you must install Paddle
             # If you only have cpu on your machine, please run the following command to install
             python3 -m pip install paddlepaddle==2.0.0 -i https://mirror.baidu.com/pypi/simple
             
-Step3: Train a New Model or Use One of the Three Pre-trained YOLOv8 Models
+<h3> Step3: Train a New Model or Use One of the Three Pre-trained YOLOv8 Models </h3>
 
       git clone https://github.com/quocbao2772004/license_plate.git
 
-Step4: Using solve.py to see the results
+<h3> Step4: Using solve.py to see the results </h3>
 
     !python solve.py
 
