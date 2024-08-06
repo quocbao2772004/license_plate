@@ -1,4 +1,4 @@
-# The tutorial is only for Windows systems.
+# The tutorial is for Windows systems and Linux.
 
 Step1: Create a Dataset and label it by using labelimg
 
@@ -8,8 +8,18 @@ Clone the repository:
     
 Convert resource files for PyQt5:    
 
+Windows:
+
     pyrcc4 -o libs/resources.py resources.qrc
     For pyqt5, pyrcc5 -o libs/resources.py resources.qrc
+
+Linux:
+
+    sudo apt-get install pyqt5-dev-tools
+    sudo pip3 install -r requirements/requirements-linux-python3.txt
+    make qt5py3
+    python3 labelImg.py
+    python3 labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
     
 Run LabelImg:  
 
@@ -17,6 +27,8 @@ Run LabelImg:
     python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
 Step2: Create virtual environment
+
+If you use Windows system:
 
   Install Anaconda and use the Anaconda Prompt to create a virtual environment:
   
@@ -27,6 +39,85 @@ Step2: Create virtual environment
   
      pip install -r requirements.txt
 
+If you use Linux:
+
+  Install annaconda:
+
+    # First install wget
+    sudo apt-get install wget # Ubuntu
+    sudo yum install wget # CentOS
+    
+  Choose an annaconda version to install
+  
+      # Then use wget to download from Tsinghua source
+    # If you want to download Anaconda3-2021.05-Linux-x86_64.sh, the download command is as follows
+    wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2024.06-1-Linux-x86_64.exe
+    # If you want to download another version, you need to change the file name after the last 1 / to the version you want to download
+ To install Anaconda.
+
+ - Type sh Anaconda3-2024.06-1-Linux-x86_64.sh at the command line
+   
+     - If you downloaded a different version, replace the file name of the command with the name of the file you downloaded
+       
+ - Just follow the installation instructions
+   
+     - You can exit by typing q when viewing the license
+       
+ - Add conda to the environment variables
+    
+     - If you have already added conda to the environment variable path during the installation, you can skip this step
+    
+     - Open ~/.bashrc in a terminal.
+           
+           # Enter the following command in the terminal.
+            vim ~/.bashrc
+       
+     - Add conda as an environment variable in ~/.bashrc.
+
+           # Press i first to enter edit mode # In the first line enter.
+            export PATH="~/anaconda3/bin:$PATH"
+            # If you customized the installation location during installation, change ~/anaconda3/bin to the bin folder in the customized installation directory
+            
+                   # The modified ~/.bash_profile file should look like this (where xxx is the username)
+            export PATH="~/opt/anaconda3/bin:$PATH"
+            # >>> conda initialize >>>
+            # !!! Contents within this block are managed by 'conda init' !!!
+            __conda_setup="$('/Users/xxx/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+            if [ $? -eq 0 ]; then
+               eval "$__conda_setup"
+            else
+               if [ -f "/Users/xxx/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+                   . "/Users/xxx/opt/anaconda3/etc/profile.d/conda.sh"
+               else
+                   export PATH="/Users/xxx/opt/anaconda3/bin:$PATH"
+               fi
+            fi
+            unset __conda_setup
+            # <<< conda initialize <<<
+    When you are done, press esc to exit edit mode, then type :wq! and enter to save and exit
+   
+   - Verify that the Conda command is recognized.
+
+    Enter source ~/.bash_profile in the terminal to update the environment variables
+   
+    Enter conda info --envs in the terminal again, if it shows that there is a base environment, then Conda has been added to the environment variables
+   
+  Create a new Conda environment
+  
+              # Enter the following command at the command line to create an environment called paddle_env
+            # Here to speed up the download, use Tsinghua source
+            conda create --name paddle_env python=3.8 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+            
+After install annaconda environment on Linux or Windows, you must install PaddleOcr
+
+            pip3 install --upgrade pip
+            
+            # If you have cuda9 or cuda10 installed on your machine, please run the following command to install
+            python3 -m pip install paddlepaddle-gpu==2.0.0 -i https://mirror.baidu.com/pypi/simple
+            
+            # If you only have cpu on your machine, please run the following command to install
+            python3 -m pip install paddlepaddle==2.0.0 -i https://mirror.baidu.com/pypi/simple
+            
 Step3: Train a New Model or Use One of the Three Pre-trained YOLOv8 Models
 
       git clone https://github.com/quocbao2772004/license_plate.git
