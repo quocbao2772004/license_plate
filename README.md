@@ -145,7 +145,7 @@ After install annaconda environment on Linux or Windows, you must install Paddle
 
 ![image](https://github.com/user-attachments/assets/609a76e0-bca9-4f8a-a8b8-57b9b9fb5582)
 
-set up time
+<h3> set up time </h3>
 
 ![image](https://github.com/user-attachments/assets/ea27a0fb-d259-4154-a266-3f814eb100b8)
 
@@ -159,7 +159,7 @@ set up time
 
 ![image](https://github.com/user-attachments/assets/6ca05206-e73f-45e6-bc42-a7040085917a)
 
-When using video() function, if we wanna stop the video, press the q key
+<h3> When using video() function, if we wanna stop the video, press the q key </h3>
 
 
 
