@@ -1,6 +1,6 @@
 # The tutorial is for Windows systems and Linux.
 
-Step1: Create a Dataset and label it by using labelimg
+<h1> Step1: Create a Dataset and label it by using labelimg
 
 Clone the repository:
 
